@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Using Array Object</title>
+<script type="text/javascript">
+var csBook = new Array(5);
+csBook[0] = "Java Programming - A Beginner Guide";
+csBook[1] = "HTML5 and Javascript Project";
+csBook[2] = "Oracle JDeveloper Handbook";
+csBook[3] = "Data Structure and Programming Design in C";
+csBook[4] = "UML for Java Programmers";
+</script>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.5em; color: blue;">
+<h1><b>An Array of Computer Science Books</b></h1>
+<script type="text/javascript">
+for(var i in csBook){
+document.write("Book["+ i + "]=" + csBook[i]+"<br>");
+}
+</script>
+</body>
+</html>

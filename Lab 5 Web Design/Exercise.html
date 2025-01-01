@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple User Profile</title>
+</head>
+<body>
+  <h1>User Profile</h1>
+  <p><strong>First Name:</strong> <span id="firstName">N/A</span></p>
+  <p><strong>Last Name:</strong> <span id="lastName">N/A</span></p>
+  <p><strong>Age:</strong> <span id="age">N/A</span></p>
+  <p><strong>Email:</strong> <span id="email">N/A</span></p>
+
+  <h2>Update Profile</h2>
+  <input type="text" id="firstNameInput" placeholder="First Name">
+  <input type="text" id="lastNameInput" placeholder="Last Name">
+  <input type="number" id="ageInput" placeholder="Age">
+  <input type="email" id="emailInput" placeholder="Email">
+  <button onclick="updateProfile()">Update</button>
+
+  <script>
+    // Create the userProfile object
+    const userProfile = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 25,
+      email: "john.doe@example.com",
+    };
+
+    // Display the user profile
+    function displayProfile() {
+      document.getElementById("firstName").textContent = userProfile.firstName;
+      document.getElementById("lastName").textContent = userProfile.lastName;
+      document.getElementById("age").textContent = userProfile.age;
+      document.getElementById("email").textContent = userProfile.email;
+    }
+
+    // Update the user profile
+    function updateProfile() {
+      userProfile.firstName = document.getElementById("firstNameInput").value || userProfile.firstName;
+      userProfile.lastName = document.getElementById("lastNameInput").value || userProfile.lastName;
+      userProfile.age = document.getElementById("ageInput").value || userProfile.age;
+      userProfile.email = document.getElementById("emailInput").value || userProfile.email;
+
+      displayProfile();
+    }
+
+    // Initialize the display
+    displayProfile();
+  </script>
+</body>
+</html>
